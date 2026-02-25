@@ -23,3 +23,6 @@ jobs:
 
       - name: Run job bot
         run: python main.py
+        env:
+          EMAIL: ${{ secrets.EMAIL }}
+          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
