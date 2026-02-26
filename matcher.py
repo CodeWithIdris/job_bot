@@ -10,8 +10,9 @@ def filter_jobs(jobs, skills):
     qualified = []
 
     for i, score in enumerate(scores[0]):
-        if score > 0.15:  # adjust threshold
+        if score > 0.05 or any(keyword in descriptions[i].lower() for keyword in ["research", "analysis", "strategy", "consulting"]): # adjust threshold
             qualified.append(jobs[i])
 
     return qualified
+
     
