@@ -26,3 +26,7 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+      - name: Install dependencies
+      run: |
+              pip install requests scikit-learn playwright
+              playwright install
